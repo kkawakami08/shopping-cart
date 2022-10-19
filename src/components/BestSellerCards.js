@@ -6,41 +6,43 @@ import pothos from '../images/products/pothos-img.jpg'
 import uniqid from 'uniqid'
 
 export default function BestSellerCards() {
+
   const bestProducts = [{
     title: "Anthurium",
     imgSrc: anthurium, 
     price: "$20",
-    id: uniqid()
+    id: uniqid(),
   },{
     title: "Croton",
     imgSrc: croton, 
     price: "$10",
-    id: uniqid()
+    id: uniqid(),
   },{
     title: "Dracaena",
     imgSrc: dracaena, 
     price: "$30",
-    id: uniqid()
+    id: uniqid(),
   },{
     title: "Pothos",
     imgSrc: pothos, 
     price: "$10",
-    id: uniqid()
+    id: uniqid(),
   }]
-
-  const bestProductsList = bestProducts.map((product) => 
-    <div className="card" key={product.id}>
-      <img src={product.imgSrc} alt={`${product.title}`} />
-      <div className="product-des">
-        <p>{product.title}</p>
-        <h3>{product.price}</h3>
-      </div>
-   </div>
-  );
 
   return (
     <>
-    {bestProductsList}
+    {bestProducts.map((product) => 
+    <div className="card" key={product.id}>
+      <img src={product.imgSrc} alt={`${product.title}`}  />
+      <div className="product-des">
+        <div>
+          <p>{product.title}</p>
+          <h3>{product.price}</h3>
+        </div>
+        <button className="add-to-cart">Add to Cart</button>
+      </div>
+   </div>
+  )}
     </>
   )
 }

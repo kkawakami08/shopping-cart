@@ -61,7 +61,7 @@
   flex-direction: column;
   align-items: center;
   border-radius: 1em;
-  gap: 1em;
+  gap: .5em;
 }
 
 .product-des {
@@ -69,4 +69,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.add-to-cart {
+  background-color: var(--fourth-color);
+  color: var(--white);
+  width: 10em;
+  height: 3em;
+  border: none;
+}
+
+.add-to-cart:hover {
+  background-color: var(--main-color);
 }
