@@ -10,15 +10,15 @@ export default function NavBar() {
       <ul>
         <li>
           <Link to="/">
-            <img className="nav-icon" src={logo} alt="Plant-Posium Logo"/>
+            <img className="nav-logo" src={logo} alt="Plant-Posium Logo"/>
           </Link>
         </li>
         <li>
-          <Link to="/shop">Shop</Link>
+          <Link to="/shop">Shop Our Plants</Link>
         </li>
         <li>
           <Link>
-            <img className="nav-icon" src={cart} alt="Cart Icon"/>
+            <img className="cart" src={cart} alt="Cart Icon"/>
           </Link>
         </li>
 

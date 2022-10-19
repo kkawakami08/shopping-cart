@@ -1,8 +1,26 @@
-.nav-icon {
+.nav-logo {
 height: 50px;
 }
 
 .nav {
   background-color: var(--main-color);
   padding: 0.5em 1em;
+}
+
+.cart {
+  height: 40px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 2em;
+  font-weight:500;
 }
