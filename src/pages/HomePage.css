@@ -1,0 +1,27 @@
+.home-container {
+  background-color: var(--white);
+}
+
+.hero-img {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2em;
+  padding: 0 4em;
+}
+
+.hero-img h1 {
+  font-size: 5em;
+  color: var(--white);
+}
+
+.hero-btn {
+  font-size: 2em;
+  background-color: var(--third-color);
+  width: 8em;
+  height: 2em;
+  border-radius: 1em;
+  border: none;
+  color: var(--white);
+}
