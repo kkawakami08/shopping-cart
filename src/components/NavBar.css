@@ -2,6 +2,14 @@
 height: 50px;
 }
 
+.nav-container {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+}
+
 .nav {
   background-color: var(--main-color);
   padding: 0.5em 1em;
@@ -23,4 +31,19 @@ ul {
   color: var(--white);
   font-size: 2em;
   font-weight:500;
+}
+
+.cart-preview {
+  background-color: var(--white);
+  width: 25em;
+  align-self: flex-end;
+  height: 30em;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
 }

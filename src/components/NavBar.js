@@ -1,28 +1,38 @@
-import React from 'react'
+import React, {useState} from 'react'
 import logo from '../images/logo-circle.png'
 import cart from '../images/cart-icon.png'
 import './NavBar.css'
 import { Link } from 'react-router-dom'
 
 export default function NavBar() {
-  return (
-    <div className="nav">
-      <ul>
-        <li>
-          <Link to="/">
-            <img className="nav-logo" src={logo} alt="Plant-Posium Logo"/>
-          </Link>
-        </li>
-        <li>
-          <Link to="/shop">Shop Our Plants</Link>
-        </li>
-        <li>
-          <Link>
-            <img className="cart" src={cart} alt="Cart Icon"/>
-          </Link>
-        </li>
+  const [visible, setVisible] = useState(false);
 
-      </ul>
+  return (
+    <div className="nav-container">
+      <div className="nav">
+        <ul>
+          <li>
+            <Link to="/">
+              <img className="nav-logo" src={logo} alt="Plant-Posium Logo"/>
+            </Link>
+          </li>
+          <li>
+            <Link to="/shop">Shop Our Plants</Link>
+          </li>
+          <li>
+            <Link to="/cart">
+              <img className="cart" src={cart} alt="Cart Icon" onMouseEnter={() => {setVisible(true)}} onMouseLeave={() => {setVisible(false)}}/>
+            </Link>
+          </li>
+
+        </ul>
+      </div>
+      {visible && (
+        <div className="cart-preview">
+          <h2>Your Cart is Empty</h2>
+       </div>
+      )}
+      
     </div>
   )
 }
