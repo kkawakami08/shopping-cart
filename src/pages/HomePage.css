@@ -16,12 +16,20 @@
   color: var(--white);
 }
 
-.hero-btn {
+#hero-btn a {
+  color: var(--white);
+}
+
+#hero-btn {
   font-size: 2em;
   background-color: var(--third-color);
   width: 8em;
   height: 2em;
   border-radius: 1em;
   border: none;
-  color: var(--white);
+}
+
+#hero-btn:hover{
+  background-color: var(--fourth-color);
+  cursor: pointer;
 }
