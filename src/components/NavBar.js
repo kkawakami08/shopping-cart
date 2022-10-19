@@ -3,6 +3,7 @@ import logo from '../images/logo-circle.png'
 import cart from '../images/cart-icon.png'
 import './NavBar.css'
 import { Link } from 'react-router-dom'
+import CartPreview from './CartPreview'
 
 export default function NavBar() {
   const [visible, setVisible] = useState(false);
@@ -28,9 +29,7 @@ export default function NavBar() {
         </ul>
       </div>
       {visible && (
-        <div className="cart-preview">
-          <h2>Your Cart is Empty</h2>
-       </div>
+        <CartPreview />
       )}
       
     </div>
