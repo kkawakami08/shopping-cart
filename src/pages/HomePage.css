@@ -3,7 +3,7 @@
 }
 
 .hero-img {
-  height: 70vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,9 +23,9 @@
 #hero-btn {
   font-size: 2em;
   background-color: var(--third-color);
-  width: 8em;
-  height: 2em;
-  border-radius: 1em;
+  width: 9em;
+  height: 2.5em;
+  border-radius: 2em;
   border: none;
 }
 
@@ -81,4 +81,24 @@
 
 .add-to-cart:hover {
   background-color: var(--main-color);
+  cursor: pointer;
+}
+
+.quantity {
+  display: flex;
+  gap: .2em;
+}
+
+.quantity input {
+  width: 2.5em;
+  height: 2em;
+  border: lightgray solid 1px;
+  padding-left: .5em;
+}
+
+.quantity button {
+  width: 1.5em;
+  border: none;
+  background-color: var(--fourth-color);
+  color: var(--white);
 }
