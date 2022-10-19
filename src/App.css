@@ -1,0 +1,12 @@
+* {
+  padding: 0;
+  margin: 0;
+  --main-color: #344e41;
+  --second-color: #3a5a40;
+  --third-color: #588157;
+  --fourth-color: #a3b18a;
+  --fifth-color: #dad7cd;
+  --white: #fffafa;
+  --black: #0c0908;
+  font-family: 'Inter', sans-serif;
+}
