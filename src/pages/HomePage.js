@@ -2,7 +2,7 @@ import React from 'react'
 import './HomePage.css'
 import heroImg from '../images/hero-img.jpg'
 import { Link } from 'react-router-dom'
-import anthurium from '../images/products/anthurium-img.jpg'
+import BestSellerCards from '../components/BestSellerCards'
 
 export default function HomePage() {
   return (
@@ -15,34 +15,7 @@ export default function HomePage() {
         <h1>Best Sellers</h1>
         {/* map Array */}
         <div className="card-container">
-          <div className="card">
-            <img src={anthurium} alt="anthurium" />
-            <div className="product-des">
-              <p>Anthurium</p>
-              <h3>$20</h3>
-            </div>
-          </div>
-          <div className="card">
-            <img src={anthurium} alt="anthurium" />
-            <div className="product-des">
-              <p>Anthurium</p>
-              <h3>$20</h3>
-            </div>
-          </div>
-          <div className="card">
-            <img src={anthurium} alt="anthurium" />
-            <div className="product-des">
-              <p>Anthurium</p>
-              <h3>$20</h3>
-            </div>
-          </div>
-          <div className="card">
-            <img src={anthurium} alt="anthurium" />
-            <div className="product-des">
-              <p>Anthurium</p>
-              <h3>$20</h3>
-            </div>
-          </div>
+          <BestSellerCards />
         </div>
        </div>
     </div>
