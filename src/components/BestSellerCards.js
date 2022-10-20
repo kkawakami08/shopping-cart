@@ -1,7 +1,8 @@
 import React from 'react'
 
-export default function BestSellerCards({products}) {
+export default function BestSellerCards({products,setCart,cart}) {
   const bestProducts = [products[0],products[1],products[2],products[3]]
+
   return (
     <>
     {bestProducts.map((product) => 
