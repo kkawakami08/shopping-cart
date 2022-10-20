@@ -40,3 +40,19 @@ ul {
   height: 30em;
 }
 
+.cart-product img{
+width: 100px;
+height: 100px;
+object-fit: cover;
+}
+
+.cart-product {
+  background-color: aqua;
+  display: flex;
+}
+
+.quantity-cart {
+  display: flex;
+  flex-direction: column;
+}
+

@@ -1,12 +1,12 @@
 import React, {useState} from 'react'
 import logo from '../images/logo-circle.png'
-import cart from '../images/cart-icon.png'
+import cartIcon from '../images/cart-icon.png'
 import './NavBar.css'
 import { Link } from 'react-router-dom'
 import CartPreview from './CartPreview'
 
-export default function NavBar() {
-  const [visible, setVisible] = useState(false);
+export default function NavBar({cart,setCart}) {
+  const [visible, setVisible] = useState(true);
 
   return (
     <div className="nav-container">
@@ -22,14 +22,14 @@ export default function NavBar() {
           </li>
           <li>
             <Link to="/cart">
-              <img className="cart" src={cart} alt="Cart Icon" onMouseEnter={() => {setVisible(true)}} onMouseLeave={() => {setVisible(false)}}/>
+              <img className="cart" src={cartIcon} alt="Cart Icon" onMouseEnter={() => {setVisible(true)}} onMouseLeave={() => {setVisible(false)}}/>
             </Link>
           </li>
 
         </ul>
       </div>
       {visible && (
-        <CartPreview />
+        <CartPreview cart={cart} setCart={setCart}/>
       )}
       
     </div>

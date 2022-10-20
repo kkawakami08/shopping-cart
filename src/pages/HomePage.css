@@ -79,7 +79,8 @@
   border: none;
 }
 
-.add-to-cart:hover {
+.add-to-cart:hover,
+.quantity-btn:hover {
   background-color: var(--main-color);
   cursor: pointer;
 }
@@ -96,7 +97,7 @@
   padding-left: .5em;
 }
 
-.quantity button {
+.quantity-btn {
   width: 1.5em;
   border: none;
   background-color: var(--fourth-color);

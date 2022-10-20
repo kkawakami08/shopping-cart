@@ -94,7 +94,6 @@ export default function BestSellerCards() {
     <>
     {bestProducts.map((product) => 
     <div className="card" key={product.id}>
-      <h1>Quantity: {product.plantQuantity}</h1>
       <img src={product.imgSrc} alt={`${product.title}`}  />
       <div className="product-des">
         <div>
@@ -103,8 +102,8 @@ export default function BestSellerCards() {
         </div>
         <div className="quantity">
           <input type="text" value={product.plantQuantity} onChange={(e) => {product.setInput(e)}}/>
-          <button onClick={() => {product.setIncrement(+1)}}>+</button>
-          <button onClick={() => {product.setIncrement(-1)}}>-</button>
+          <button className="quantity-btn" onClick={() => {product.setIncrement(+1)}}>+</button>
+          <button className="quantity-btn" onClick={() => {product.setIncrement(-1)}}>-</button>
         </div>
         <button className="add-to-cart">Add to Cart</button>
       </div>
