@@ -19,6 +19,9 @@ export default function BestSellerCards() {
     id: uniqid(),
     setIncrement: function(amount) {
       setAnthuriumQuantity(currentAnthuriumQuantity => {
+        if(currentAnthuriumQuantity+amount <= 0) {
+          return 0;
+        } else
         return currentAnthuriumQuantity + amount
       })
     },
@@ -35,6 +38,9 @@ export default function BestSellerCards() {
     id: uniqid(),
     setIncrement: function(amount) {
       setCrotonQuantity(currentCrotonQuantity => {
+        if(currentCrotonQuantity + amount <=0) {
+          return 0;
+        } else
         return currentCrotonQuantity + amount
       })
     },
@@ -51,6 +57,9 @@ export default function BestSellerCards() {
     id: uniqid(),
     setIncrement: function(amount) {
       setDracaenaQuantity(currentDracaenaQuantity => {
+        if(currentDracaenaQuantity + amount <= 0) {
+          return 0;
+        } else
         return currentDracaenaQuantity + amount
       })
     },
@@ -67,6 +76,9 @@ export default function BestSellerCards() {
     id: uniqid(),
     setIncrement: function(amount) {
       setPothosQuantity(currentPothosQuantity => {
+        if (currentPothosQuantity + amount <=0) {
+          return 0;
+        } else
         return currentPothosQuantity + amount
       })
     },
