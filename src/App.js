@@ -97,7 +97,7 @@ const products = [
   return (
     <div>
       <Router>
-        <NavBar />
+        <NavBar cart={cart}/>
         <Routes>
           <Route path="/" element = {<HomePage 
           products={products}
