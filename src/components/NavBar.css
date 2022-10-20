@@ -49,10 +49,18 @@ object-fit: cover;
 .cart-product {
   background-color: aqua;
   display: flex;
+  padding: 1rem;
 }
 
 .quantity-cart {
   display: flex;
   flex-direction: column;
+}
+
+.quantity-cart input {
+  width: 3em;
+  height: 2em;
+  border: lightgray solid 1px;
+  padding-left: .5em;
 }
 

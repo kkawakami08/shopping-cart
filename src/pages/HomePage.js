@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import BestSellerCards from '../components/BestSellerCards'
 import Footer from '../components/Footer'
 
-export default function HomePage() {
+export default function HomePage({products}) {
   return (
     <div className="home-container">
       <div className="hero-img" style={{backgroundImage: `url(${heroImg})`}}>
@@ -15,7 +15,7 @@ export default function HomePage() {
        <div className="best-sellers">
         <h1>Best Sellers</h1>
         <div className="card-container">
-          <BestSellerCards />
+          <BestSellerCards products={products}/>
         </div>
        </div>
        <Footer />

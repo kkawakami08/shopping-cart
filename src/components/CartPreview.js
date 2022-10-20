@@ -7,16 +7,16 @@ export default function CartPreview({cart,setCart}) {
        <div className="cart-product" key={product.id}>
         <img src={product.imgSrc} alt={`${product.title}`}  />
         <div>
-          <h1>{product.name}</h1>
-          <h3>{product.price}</h3>
+          <p>{product.name}</p>
+          <p>{product.price}</p>
         </div>
         <div className="quantity-cart">
-            <input type="text" value={product.plantQuantity} onChange={(e) => {product.setInput(e)}}/>
+            <input type="text" value={product.quantity} onChange={(e) => {product.setInput(e)}}/>
             <div>
               <button className="quantity-btn" onClick={() => {product.setIncrement(+1)}}>+</button>
               <button className="quantity-btn" onClick={() => {product.setIncrement(-1)}}>-</button>
             </div>
-            <button className="add-to-cart">Remove</button>
+            <p className="remove">Remove</p>
         </div>
         
       </div>
