@@ -8,49 +8,81 @@ import { type } from '@testing-library/user-event/dist/type'
 
 export default function BestSellerCards() {
   const [anthuriumQuantity,setAnthuriumQuantity] = useState(0);
+  const [crotonQuantity,setCrotonQuantity] = useState(0);
+  const [dracaenaQuantity,setDracaenaQuantity] = useState(0);
+  const [pothosQuantity,setPothosQuantity] = useState(0);
 
   const bestProducts = [{
     title: "Anthurium",
     imgSrc: anthurium, 
     price: "$20",
     id: uniqid(),
+    setIncrement: function(amount) {
+      setAnthuriumQuantity(currentAnthuriumQuantity => {
+        return currentAnthuriumQuantity + amount
+      })
+    },
+    setInput: function(e) {
+      let target = e.target.value;
+      let newQuantity = parseInt(target);
+      setAnthuriumQuantity(newQuantity)
+    },
     plantQuantity: anthuriumQuantity
   },{
     title: "Croton",
     imgSrc: croton, 
     price: "$10",
     id: uniqid(),
-    plantQuantity: 0
+    setIncrement: function(amount) {
+      setCrotonQuantity(currentCrotonQuantity => {
+        return currentCrotonQuantity + amount
+      })
+    },
+    setInput: function(e) {
+      let target = e.target.value;
+      let newQuantity = parseInt(target);
+      setCrotonQuantity(newQuantity)
+    },
+    plantQuantity: crotonQuantity
   },{
     title: "Dracaena",
     imgSrc: dracaena, 
     price: "$30",
     id: uniqid(),
-    plantQuantity: 0
+    setIncrement: function(amount) {
+      setDracaenaQuantity(currentDracaenaQuantity => {
+        return currentDracaenaQuantity + amount
+      })
+    },
+    setInput: function(e) {
+      let target = e.target.value;
+      let newQuantity = parseInt(target);
+      setDracaenaQuantity(newQuantity)
+    },
+    plantQuantity: dracaenaQuantity
   },{
     title: "Pothos",
     imgSrc: pothos, 
     price: "$10",
     id: uniqid(),
-    plantQuantity: 0
+    setIncrement: function(amount) {
+      setPothosQuantity(currentPothosQuantity => {
+        return currentPothosQuantity + amount
+      })
+    },
+    setInput: function(e) {
+      let target = e.target.value;
+      let newQuantity = parseInt(target);
+      setPothosQuantity(newQuantity)
+    },
+    plantQuantity: pothosQuantity
   }]
 
-  const increment = (amount) => {
-    setAnthuriumQuantity((currentAnthuriumQuantity) => {
-      return currentAnthuriumQuantity + amount
-    })
-  }
-
-  const numInput = (e) => {
-    let target = e.target.value;
-    let newQuantity = parseInt(target);
-    setAnthuriumQuantity(newQuantity)
-  }
   return (
     <>
     {bestProducts.map((product) => 
     <div className="card" key={product.id}>
-      <h2>Quantity: {product.plantQuantity}</h2>
+      <h1>Quantity: {product.plantQuantity}</h1>
       <img src={product.imgSrc} alt={`${product.title}`}  />
       <div className="product-des">
         <div>
@@ -58,9 +90,9 @@ export default function BestSellerCards() {
           <h3>{product.price}</h3>
         </div>
         <div className="quantity">
-          <input type="text" value={product.plantQuantity} onChange={numInput}/>
-          <button onClick={() => {increment(+1)}}>+</button>
-          <button onClick={() => {increment(-1)}}>-</button>
+          <input type="text" value={product.plantQuantity} onChange={(e) => {product.setInput(e)}}/>
+          <button onClick={() => {product.setIncrement(+1)}}>+</button>
+          <button onClick={() => {product.setIncrement(-1)}}>-</button>
         </div>
         <button className="add-to-cart">Add to Cart</button>
       </div>
