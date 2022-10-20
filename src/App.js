@@ -10,26 +10,12 @@ import croton from '../src/images/products/croton-img.jpg'
 import uniqid from 'uniqid'
 
 function App() {
-  const [cart,setCart] = useState([{
-    name: "Anthurium",
-    price: "$20",
-    quantity: 1,
-    imgSrc: anthurium,
-    id: uniqid()
-
-  },
-  // {
-  //   product: "Pothos",
-  //   quantity: 1,
-  //   imgSrc: pothos,
-  //   id: uniqid()
-  // }
-])
-
 const [anthuriumQuantity,setAnthuriumQuantity] = useState(0);
 const [crotonQuantity,setCrotonQuantity] = useState(0);
 const [dracaenaQuantity,setDracaenaQuantity] = useState(0);
 const [pothosQuantity,setPothosQuantity] = useState(0);
+
+const [cart,setCart] = useState([])
 
 const products = [
   { title: "Anthurium",
@@ -111,7 +97,7 @@ const products = [
   return (
     <div>
       <Router>
-        <NavBar cart={cart} setCart={setCart}/>
+        <NavBar />
         <Routes>
           <Route path="/" element = {<HomePage 
           products={products}
